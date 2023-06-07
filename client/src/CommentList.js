@@ -12,13 +12,18 @@ const CommentList = ({postId}) => {
 
   useEffect(() => {
     fetchData()
+    // eslint-disable-next-line
   }, [])
 
   const renderedComments = Object.values(comments).map((comment) => {
-    return <li key={comment.id}>{comment.content}</li>
+    return (
+      <li key={comment.id}>{comment.content}</li>
+    )
   })
 
-  return <ul>{renderedComments}</ul>
+  return (
+    <ul>{renderedComments}</ul>
+  ) 
 }
 
 export default CommentList
