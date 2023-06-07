@@ -21,6 +21,7 @@ app.post('/events', async (req, res) => {
       }
     })
   }
+  res.send({})
 })
 
 app.listen(4003, () => {
